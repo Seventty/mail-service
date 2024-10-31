@@ -7,9 +7,9 @@ export class EmailService {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: 'rainieryvalerio.example.com',  // Para enviar a través de Postfix en localhost
-      port: 25,           // Puerto predeterminado de Postfix
-      secure: false,      // No requiere TLS
+      host: 'rainieryvalerio.example.com',
+      port: 25,           
+      secure: false,      
       tls: {
         rejectUnauthorized: false,
       },
@@ -18,7 +18,7 @@ export class EmailService {
 
   async sendEmail(to: string, subject: string, text: string) {
     const mailOptions = {
-      from: 'elmastigeron2015@gmail.com',
+      from: 'example@example.com', // Change this for a real email direction
       to,
       subject,
       text,
